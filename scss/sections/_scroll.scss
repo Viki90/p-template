@@ -1,0 +1,82 @@
+@use "../scss-utils/variables" as *;
+@use "../scss-utils/mixins" as *;
+
+.projects {
+    height: auto;
+    margin: 0 auto;
+
+    .scroll {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        padding-top: 48px;
+        cursor: default;
+        overflow: scroll hidden;
+        -ms-scroll-snap-type: x mandatory;
+        scroll-snap-type: x mandatory;
+        scroll-padding: 0px 1.25rem;
+        scrollbar-width: none;
+        &-card {
+          width: 19rem;
+          height: auto;
+          flex: 0 0 auto;
+          border: none;
+          outline: none;
+          background: $card-color;
+          padding-top: 1rem;
+          padding-right: 1rem;
+          padding-bottom: 1rem;
+          padding-left: 0.5rem;
+          border-radius: 12px;
+          color: #252a32;
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+          margin-right: 0.5rem;
+          &__color {
+            height: 24px;
+            border-radius: 4px;
+          }
+          &__wrap {
+            padding: 1rem 0.5rem 0.2rem 0.5rem;
+            background-color: $lighter-dark;
+            margin-top: 1rem;
+            border-radius: 4px;
+            img {
+              width: 16px !important;
+              height: 16px !important;
+            }
+            button.btn {
+              border-radius: 8px;
+              padding: 4px;
+              span {
+                padding-right: 0;
+              }
+            }
+            .row {
+              padding-top: 0.5rem;
+            }
+            &-row {
+             
+            }
+          }
+          &__box {
+            height: 2.5rem;
+            background: rgba(121, 120, 156, 0.4);
+            border-radius: 8px;
+            position: relative;
+          }
+          &__btn {
+            padding-top: 1rem;
+            button.btn {
+              width: 100%;
+              display: flex;
+              align-items: center;
+            }
+          }
+        }
+
+    }
+}

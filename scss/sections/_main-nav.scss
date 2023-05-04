@@ -1,0 +1,76 @@
+@use "../scss-utils/variables" as *;
+@use "../scss-utils/mixins" as *;
+
+.main-nav {
+    @include flex-between;
+    width: 100%;
+    flex-flow: row;
+    &_left {
+        display: flex;
+        .btn-group {
+            margin-right: 0.5rem;
+            .btn:first-child {
+                background-color: $pink;
+                padding-top: 0.8rem;
+                padding-left: 1rem;
+                padding-bottom: 0.8rem;
+                border-bottom-right-radius: 0;
+                border-top-right-radius: 0;
+                border-bottom-left-radius: 12px;
+                border-top-left-radius: 12px;
+                border: 1px solid $pink;
+                &:hover {
+                    background-color: #f16e96;
+                }
+            }
+
+            .btn.dropdown-toggle-split {
+                border-bottom-right-radius: 12px;
+                border-top-right-radius: 12px;
+                border-bottom-left-radius: 0;
+                border-top-left-radius: 0;
+                border: 1px solid $pink;
+                background-color: $pink;
+                &:hover {
+                    background-color: #f16e96;
+                }
+            }
+
+            .dropdown-menu {
+                border-radius: 8px;
+                background: #464564;
+                box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15);
+                overflow-y: auto;
+                padding: 0.5rem;
+
+                a.dropdown-item {
+                    border-radius: 0.5rem;
+                    padding: 0.3438rem 0.5rem;
+                    @include flex-alg-center;
+                    color: rgba(242, 242, 248, 0.87);
+
+                    &:hover {
+                        background-color: rgba(121,120,156,.4);
+                        color: rgba(242,242,248,.87);
+                    }
+
+                    span {
+                        padding-right: 0.5rem;
+                    }
+                }
+            }
+
+        }
+
+        .btn-second {
+            @include flex-alg-center;
+            margin-right: 0.5rem;
+        }
+    }
+    &_right {
+        display: flex;
+        button.btn span {
+            padding-right: 0;
+        }
+    }
+}

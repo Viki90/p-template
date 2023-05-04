@@ -1,0 +1,30 @@
+@use "../scss-utils/variables" as *;
+@use "../scss-utils/mixins" as *;
+@use "../scss-utils/media" as *;
+
+button.btn {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: -0.01em;
+    text-transform: capitalize;
+    color: rgba(242, 242, 248, 0.87);
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    // padding-top: 0.8rem;
+    // padding-left: 1rem;
+    // padding-bottom: 0.8rem;
+    &:hover {
+        background: rgba(121, 120, 156, 0.4);
+        border-radius: 12px;
+        color: rgba(242, 242, 248, 0.87);
+         transition: all 0.8s;
+    }
+    span {
+        padding-right: 0.5rem;
+    }
+}

@@ -1,0 +1,14 @@
+@use "../scss-utils/variables" as *;
+@use "../scss-utils/mixins" as *;
+
+main {
+    background: $dark;
+    overflow: visible!important;
+    overflow-x: hidden!important;
+    padding: 1rem;
+    width: 100%;
+
+    img {
+        @include images;
+    }
+}
